@@ -1,0 +1,7 @@
+{
+  "name": "tictactrip-justify",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ]
+}
