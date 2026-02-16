@@ -8,9 +8,7 @@ import {
   RefreshCw,
   ShieldCheck,
   AlertCircle,
-  Hash,
   Clock,
-  ExternalLink,
 } from "lucide-react";
 import { toast } from "sonner";
 import { clsx, type ClassValue } from "clsx";
