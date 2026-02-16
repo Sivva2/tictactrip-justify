@@ -6,6 +6,7 @@ import { motion } from "motion/react";
 const API_URL =
   import.meta.env.VITE_API_URL ||
   "https://tictactrip-justify-api-production.up.railway.app";
+
 export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 font-sans text-slate-100 relative overflow-x-hidden flex items-center justify-center py-12">
