@@ -7,6 +7,7 @@ const app = express();
 
 app.use(
   cors({
+    origin: ["http://localhost:5173", "https://tictac-justify.netlify.app/"],
     exposedHeaders: ["X-RateLimit-Remaining"],
   }),
 );
