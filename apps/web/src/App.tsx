@@ -9,7 +9,7 @@ export default function App() {
   return (
     <div className="min-h-screen bg-slate-950 font-sans text-slate-100 relative overflow-x-hidden flex items-center justify-center py-12">
       {/* Floating Cookie */}
-      <div className="fixed bottom-6 right-6 z-[60] group">
+      <div className="fixed bottom-6 right-6 z-60 group">
         <div className="relative">
           <motion.div
             animate={{ rotate: 360 }}

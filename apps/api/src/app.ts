@@ -1,8 +1,15 @@
 import express from "express";
 import tokenRouter from "./routes/token";
 import justifyRouter from "./routes/justify";
+import cors from "cors";
 
 const app = express();
+
+app.use(
+  cors({
+    exposedHeaders: ["X-RateLimit-Remaining"],
+  }),
+);
 
 // Parse JSON for /api/token
 app.use("/api/token", express.json());

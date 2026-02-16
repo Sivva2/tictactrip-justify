@@ -190,9 +190,6 @@ export function JustifyTool({ apiUrl }: Props) {
         <div>
           <h1 className="text-3xl font-bold text-slate-100 flex items-center gap-2">
             Justify.io{" "}
-            <span className="text-[10px] bg-emerald-500/20 text-emerald-400 px-2 py-0.5 rounded-full font-bold uppercase tracking-wider">
-              API Active
-            </span>
           </h1>
           <p className="text-slate-400 mt-1 flex items-center gap-2 text-sm">
             <Clock className="w-4 h-4 text-slate-500" /> Daily limit: 80,000
@@ -205,7 +202,7 @@ export function JustifyTool({ apiUrl }: Props) {
             <span className="text-[10px] uppercase tracking-wider text-slate-500 font-bold">
               Your Token
             </span>
-            <span className="font-mono text-xs text-slate-300 truncate max-w-[120px]">
+            <span className="font-mono text-xs text-slate-300 truncate max-w-30">
               {token}
             </span>
           </div>
@@ -232,7 +229,7 @@ export function JustifyTool({ apiUrl }: Props) {
               </span>
             </div>
             <textarea
-              className="w-full h-[400px] p-6 outline-none resize-none bg-transparent text-slate-300 font-sans leading-relaxed placeholder:text-slate-700"
+              className="w-full h-100 p-6 outline-none resize-none bg-transparent text-slate-300 font-sans leading-relaxed placeholder:text-slate-700"
               placeholder="Paste your text here to justify it..."
               value={inputText}
               onChange={(e) => setInputText(e.target.value)}
@@ -253,9 +250,7 @@ export function JustifyTool({ apiUrl }: Props) {
                     Processing <RefreshCw className="w-4 h-4 animate-spin" />
                   </>
                 ) : (
-                  <>
-                    Justify (80 chars) <Hash className="w-4 h-4" />
-                  </>
+                  <>Justify</>
                 )}
               </button>
             </div>
@@ -317,7 +312,7 @@ export function JustifyTool({ apiUrl }: Props) {
               </button>
             </div>
 
-            <div className="flex-grow p-6 overflow-auto bg-slate-950/20">
+            <div className="grow p-6 overflow-auto bg-slate-950/20">
               <AnimatePresence mode="wait">
                 {outputText ? (
                   <motion.pre
@@ -363,19 +358,10 @@ export function JustifyTool({ apiUrl }: Props) {
                     Width
                   </span>
                   <span className="text-xs font-mono font-bold text-slate-400">
-                    80ch
+                    80 char
                   </span>
                 </div>
               </div>
-
-              <a
-                href="https://fr.wikipedia.org/wiki/Justification_(typographie)"
-                target="_blank"
-                rel="noreferrer"
-                className="text-[10px] font-bold uppercase tracking-widest text-slate-500 hover:text-slate-300 flex items-center gap-1.5 transition-colors"
-              >
-                Documentation <ExternalLink className="w-3 h-3" />
-              </a>
             </div>
           </div>
         </div>
